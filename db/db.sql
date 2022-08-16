@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS deptStore;
+CREATE DATABASE deptStore;
+USE deptStore;
