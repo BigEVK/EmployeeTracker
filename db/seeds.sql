@@ -10,9 +10,9 @@ VALUES
 
 INSERT INTO role (title, salary)
 VALUES
-('Regional Manager', '85,000'),
-('Store Manager', '65,000'),
-('Depatment Manager', '45,000'),
+('Regional Manager', '85000'),
+('Store Manager', '65000'),
+('Depatment Manager', '45000'),
 ('Clerk', '12.50');
 
 INSERT INTO employee (first_name, last_name)
