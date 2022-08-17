@@ -1,24 +1,25 @@
 const mysql = require('mysql2');
-const express = require('express');
+// const express = require('express'); EXPRESS IS NOT NEEDED
 const PORT = process.env.PORT || 3001;
-const app = express();
+// const app = express(); EXPRESS IS NOT NEEDED
 const inputCheck = require('./utils/inputCheck');
 // const inquirer = require('inquirer');
 
 // Express middleware
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
+// app.use(express.json());
 
-// connect to dattabase
-const db = mysql.createConnection(
-    {
-        host: 'localhost',
-        user: 'root',
-        password: 'R00t',
-        database: 'dept_store'
-    },
-    console.log('Connected to the dept_store database')
-);
+// DO NOT NEED A DATABASE!!!!!!!!!!!!!!!!!!!!
+// // connect to dattabase
+// const db = mysql.createConnection(
+//     {
+//         host: 'localhost',
+//         user: 'root',
+//         password: 'R00t',
+//         database: 'dept_store'
+//     },
+//     console.log('Connected to the dept_store database')
+// );
 
 // Test to see that it returns the employees---- It does ---
 // db.query(`SELECT * FROM employees`, (err, rows) => {
@@ -32,7 +33,7 @@ app.get('/api/employees', (req, res) => {
                 AS department_name
                 FROM employees
                 LEFT JOIN departments
-                ON employees.department_id = employees.id`;
+                ON department_id = employees.department_id`;
 
     db.query(sql, (err, rows) => {
         if (err) {
