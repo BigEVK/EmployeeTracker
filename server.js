@@ -30,7 +30,7 @@ const db = mysql.createConnection(
 app.get('/api/employees', (req, res) => {
     const sql = `SELECT employees.*, departments.name
                 AS department_name
-                FROM employee
+                FROM employees
                 LEFT JOIN departments
                 ON employees.department_id = employees.id`;
 
