@@ -3,8 +3,24 @@ const mysql = require('mysql2');
 const PORT = process.env.PORT || 3001;
 // const app = express(); EXPRESS IS NOT NEEDED
 const inputCheck = require('./utils/inputCheck');
-// const inquirer = require('inquirer');
+const inquirer = require('inquirer');
+const Sequelize = require('sequelize');
+require('dotenv').config();
 
+const sequelize = new Sequelize(
+    process.env.DB_NAME,
+    process.env.DB_USER,
+    process.env.DB_PASSWORD,
+    {
+        host: 'localhost',
+        dialect: 'mysql',
+        port: 3001
+    }
+);
+
+// sequelize.sync({ force: false }).then(() => {
+//     app.listen(PORT, () => console.log('Now listening'));
+// }),
 // Express middleware
 // app.use(express.urlencoded({ extended: false }));
 // app.use(express.json());
