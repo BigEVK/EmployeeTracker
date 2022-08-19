@@ -18,13 +18,15 @@ class Queries{
         return this.connections.promise().query(``)
     }
     addEmployee () {
-        return this.connections.promise().query(`UPDATE employee
-                    SET department = ?
-                    WHERE id = ?`)
+        return this.connections.promise().query(`INSERT INTO candidates (first_name, last_name, industry_connected)
+        VALUES (?, ?, ?)`)
     }
     removeEmployee () {
         return this.connections.promise().query(`DELETE FROM employees
                     WHERE id = ?`)
+    }
+    updtEmpRole () {
+        return this.connections.promise().query(`UPDATE employees SET role_id =? WHERE id = ?`)
     }
 }
 
