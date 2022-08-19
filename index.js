@@ -28,11 +28,11 @@ questions()
 .then((answers) => {
     console.log(answers.store) 
     if (answers.store === "View All Employees") {
-        console.log('You choose to view all employees')
+        console.log('You chose to view all employees')
         viewEmployees()
     }
     if (answers.store === "View All Employees By Department") {
-        console.log('You choose to view all employees by department')
+        console.log('You chose to view all employees by department')
         viewAllEmpByDept()
     return;
     }

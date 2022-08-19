@@ -8,7 +8,7 @@ class Queries{
         return this.connections.promise().query(`SELECT * FROM employees`);
     }
     viewAllEmpByDept () {
-        return this.connections.promise().query(`SELECT employees.*, department.name
+        return this.connections.promise().query(`SELECT employees.*, department_id
                     AS department_name
                     FROM employees
                     LEFT JOIN departments
