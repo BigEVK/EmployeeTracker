@@ -8,11 +8,11 @@ class Queries{
         return this.connections.promise().query(`SELECT * FROM employees`);
     }
     viewAllEmpByDept () {
-        return this.connections.promise().query(`SELECT employees.*, department_id
+        return this.connections.promise().query(`SELECT employees.*, roles.title
                     AS department_name
                     FROM employees
-                    LEFT JOIN departments
-                    ON department_id = employees.department_id`)
+                    LEFT JOIN roles
+                    ON roles.department_id = employees.department_id`)
     }
     viewAllEmpByMngr () {
         return this.connections.promise().query(``)

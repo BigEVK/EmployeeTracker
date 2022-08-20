@@ -26,8 +26,8 @@ VALUES
 ('Kyle', 'Broflovski', 2, 4),
 ('Kenny', 'McCormick', 2, 4),
 ('Eric', 'Cartman', 3, 4),
-('Stan', 'Marsh', 3, 5),
+('Stan', 'Marsh', 3, 2),
 ('Clyde', 'Donovan', 3, 4),
 ('Craig', 'Tucker', 3, 4),
-('Randy', 'Marsh', 3, 6),
-('Terrence', 'Phillips', 3, 6);
+('Randy', 'Marsh', 3, 2),
+('Terrence', 'Phillips', 3, 2);
