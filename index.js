@@ -46,6 +46,10 @@ questions()
     if (answers.store === "View All Employees By Department") {
         console.log('You chose to view all employees by department')
         viewAllEmpByDept()
+    }
+    if (answers.store === "View All Employees By Manager") {
+        console.log('You chose to view all employees by manager')
+        viewAllEmpByMngr()
     return;
     }
 });
@@ -79,5 +83,11 @@ function viewAllEmpByDept() {
         askQuestions()
     })
 }
-
+function viewAllEmpByMngr() {
+    queries.viewAllEmpByMngr()
+    .then(([data]) => {
+        console.table(data)
+        askQuestions()
+    })
+}
 askQuestions();
